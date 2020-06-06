@@ -1,0 +1,20 @@
+<idea-plugin>
+    <id>siosio.EmojiCommitLogViewer</id>
+    <name>Emoji commit log viewer</name>
+    <vendor email="siosio12@gmail.com " url="">siosio</vendor>
+
+    <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+    </extensions>
+
+    <actions>
+    </actions>
+
+  <applicationListeners>
+    <listener class="com.github.siosio.EmojiCommitLogAppLifecycleListener"
+        topic="com.intellij.ide.AppLifecycleListener" />
+  </applicationListeners>
+</idea-plugin>
