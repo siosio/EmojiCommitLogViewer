@@ -49,7 +49,8 @@ object EmojiConverter {
             ":boom:" to "\uD83D\uDCA5",
             ":ok_hand:" to "\uD83D\uDC4C",
             ":wheelchair:" to "♿",
-            ":truck:" to "\uD83D\uDE9A"
+            ":truck:" to "\uD83D\uDE9A",
+            ":recycle:" to "♻"
         )
         return converterMap.entries
             .fold(value) {acc, entry ->
