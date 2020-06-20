@@ -67,8 +67,8 @@ object EmojiConverter {
                 ":smiley:" to "\uD83D\uDE03",
                 ":relaxed:" to "☺",
                 ":smirk:" to "\uD83D\uDE0F",
-                ":heart_eyes:" to "\uD83D\uDE0D",
-                ":kissing_heart:" to "\uD83D\uDE18"
+                ":heart_eyes:" to "😍",
+                ":kissing_heart:" to "😘"
                 )
 
         return converterMap.entries
