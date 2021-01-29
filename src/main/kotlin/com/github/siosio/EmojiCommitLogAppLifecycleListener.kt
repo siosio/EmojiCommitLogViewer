@@ -1,9 +1,11 @@
 package com.github.siosio
 
 import com.intellij.ide.AppLifecycleListener
+import com.intellij.openapi.diagnostic.logger
 import javassist.ClassClassPath
 import javassist.ClassPool
 import javassist.CtNewMethod
+import java.io.IOException
 
 class EmojiCommitLogAppLifecycleListener : AppLifecycleListener {
 
@@ -21,7 +23,11 @@ class EmojiCommitLogAppLifecycleListener : AppLifecycleListener {
             $1 = new com.intellij.vcs.log.ui.render.GraphCommitCell(convert($1.getText()), $1.getRefsToThisCommit(), $1.getPrintElements());""".trimIndent())
 
 
-        ctClass.toClass()
-        ctClass.writeFile()
+        try {
+            ctClass.toClass()
+            ctClass.writeFile()
+        } catch (e: IOException) {
+            logger<EmojiCommitLogAppLifecycleListener>().error("unexpected exception", e)
+        }
     }
 }
