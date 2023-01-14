@@ -20,7 +20,7 @@ object EmojiMap {
                 Map::class.java
             ) as Map<String, List<Map<String, String>>>
         } catch (e: Exception) {
-            emptyMap<String, List<Map<String, String>>>()
+            emptyMap()
         }
     }
 }
