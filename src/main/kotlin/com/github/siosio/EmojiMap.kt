@@ -13,7 +13,6 @@ object EmojiMap {
 
     @JvmStatic
     private fun get(): Map<String, List<Map<String, String>>> {
-        println("get!!!!!!!!!!!!!!!!!!!!!!!!!!")
 
         return try {
             objectMapper.readValue(
